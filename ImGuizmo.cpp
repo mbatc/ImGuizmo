@@ -49,6 +49,11 @@ namespace ImGuizmo
    static const float DEG2RAD = (ZPI / 180.f);
    const float screenRotateSize = 0.06f;
 
+   float ImAbs(float val)
+   {
+      return val < 0 ? -val : val;
+   }
+
    static OPERATION operator&(OPERATION lhs, OPERATION rhs)
    {
      return static_cast<OPERATION>(static_cast<int>(lhs) & static_cast<int>(rhs));
